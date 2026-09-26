@@ -114,8 +114,8 @@ Each sheet contains styled headers and only the QnA pairs relevant to that langu
 1. **Download or clone the repository**
 
    ```bash
-   git clone <your-repo-url>
-   cd <your-repo-name>
+   git clone https://github.com/nikitanagfase/tribhasha.git
+   cd tribhasha
    ```
 
    Or download the ZIP from GitHub and extract it locally.
