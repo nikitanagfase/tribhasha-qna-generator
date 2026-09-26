@@ -1,6 +1,7 @@
-#🤖 Multilingual QnA Generation System
+# Multilingual QnA Generation System
 
 An end-to-end pipeline that extracts content from documents (PDF, DOCX, TXT), automatically generates context-aware Question-Answer pairs, translates them into English, Hindi and Marathi, and exports everything into a single, styled Excel file.
+
 
 
 ## Author
