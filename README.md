@@ -1,6 +1,7 @@
-# Multilingual QnA Generation System
+#🤖 Multilingual QnA Generation System
 
-An end-to-end pipeline that extracts content from documents (PDF, DOCX, TXT), automatically generates context-aware Question-Answer pairs, translates them into English, Hindi, and Marathi, and exports everything into a single, styled Excel file.
+An end-to-end pipeline that extracts content from documents (PDF, DOCX, TXT), automatically generates context-aware Question-Answer pairs, translates them into English, Hindi and Marathi, and exports everything into a single, styled Excel file.
+
 
 ## Author
 
@@ -8,16 +9,17 @@ Nikita Nagfase
 
 ## Affiliation
 
-Department of MCA
+Department of MCA 
+
 Suryodaya College Of Engineering And Technology, Nagpur
 
 ## Introduction
 
-Manually reading through documents to create Question-Answer pairs is time-consuming, and doing it across multiple languages multiplies the effort further. This project addresses that problem by building an intelligent, automated system that accepts a document in `.pdf`, `.docx`, or `.txt` format, understands its content, and generates meaningful, context-aware QnA pairs from it.
+Manually reading through documents to create Question-Answer pairs is time-consuming and doing it across multiple languages multiplies the effort further. This project addresses that problem by building an intelligent, automated system that accepts a document in `.pdf`, `.docx`, or `.txt` format, understands its content, and generates meaningful, context-aware QnA pairs from it.
 
-The generated QnA pairs are then translated into three languages — **English, Hindi, and Marathi** — and compiled into a single structured Excel file (`QnA.xlsx`), with one dedicated sheet per language. The system also includes a secure Login/Register module, so the tool can be safely used by multiple users, and a robust error-handling layer that ensures the pipeline never crashes, even when it encounters invalid files, empty documents, API downtime, or malformed responses.
+The generated QnA pairs are then translated into three languages — **English, Hindi and Marathi** — and compiled into a single structured Excel file (`QnA.xlsx`), with one dedicated sheet per language. The system also includes a secure Login/Register module, so the tool can be safely used by multiple users and a robust error-handling layer that ensures the pipeline never crashes, even when it encounters invalid files, empty documents, API downtime or malformed responses.
 
-The goal is to provide a reliable, user-friendly tool that turns any English document into ready-to-use multilingual QnA content, useful for education, content localization, and assessment generation.
+The goal is to provide a reliable, user-friendly tool that turns any English document into ready-to-use multilingual QnA content, useful for education, content localization and assessment generation.
 
 ## Project Structure
 
@@ -64,12 +66,12 @@ Each stage runs sequentially with a live status indicator (spinner), so the user
 
 ### Implementation
 
-1. **Authentication Layer** — Users register and log in through a SQLite-backed system. Passwords are never stored in plain text; each password is salted and hashed before being saved, and verified securely on login.
-2. **Document Ingestion** — Based on the uploaded file's extension, the appropriate extractor is invoked to pull raw text out of the `.pdf`, `.docx`, or `.txt` file.
+1. **Authentication Layer** — Users register and log in through a SQLite-backed system. Passwords are never stored in plain text; each password is salted and hashed before being saved and verified securely on login.
+2. **Document Ingestion** — Based on the uploaded file's extension, the appropriate extractor is invoked to pull raw text out of the `.pdf`, `.docx` or `.txt` file.
 3. **QnA Generation** — The extracted text is passed to an LLM-based generation module, which produces contextually relevant, grammatically correct Question-Answer pairs in English.
 4. **Translation** — The English QnA pairs are translated into Hindi and Marathi in two separate steps, preserving the meaning and structure of each question and answer.
 5. **Excel Compilation** — All three language sets are written into a single workbook, `QnA.xlsx`, with one sheet per language and styled header rows.
-6. **Error Handling** — Every module (extraction, generation, translation, Excel build) is wrapped in exception handling, so invalid files, empty documents, API downtime, rate limits, or bad JSON responses surface as friendly error messages instead of crashing the application.
+6. **Error Handling** — Every module (extraction, generation, translation, Excel build) is wrapped in exception handling, so invalid files, empty documents, API downtime, rate limits or bad JSON responses surface as friendly error messages instead of crashing the application.
 
 ## Features
 
@@ -78,7 +80,7 @@ Each stage runs sequentially with a live status indicator (spinner), so the user
 - **Multilingual output** — Auto-translates QnA pairs into **English**, **Hindi**, and **Marathi**
 - **Secure authentication** — Login/Register system built on SQLite with salted password hashing (no plain-text passwords ever stored)
 - **Full pipeline with live feedback** — Extract → Generate QnA → Translate (Hindi) → Translate (Marathi) → Build Excel, with a spinner/status indicator at every step
-- **Robust error handling** — Gracefully handles invalid files, empty documents, API downtime, rate limits, and malformed API responses with user-friendly error messages instead of crashing
+- **Robust error handling** — Gracefully handles invalid files, empty documents, API downtime, rate limits and malformed API responses with user-friendly error messages instead of crashing
 
 ### Output Format
 
