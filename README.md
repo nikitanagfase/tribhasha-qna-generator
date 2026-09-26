@@ -103,9 +103,9 @@ Each sheet contains styled headers and only the QnA pairs relevant to that langu
 - **Document Parsing:** PDF / DOCX / TXT extraction libraries
 - **QnA Generation & Translation:** LLM-based API
 - **Excel Export:** `openpyxl` / `xlsxwriter`
-- **UI (optional):** Streamlit / Gradio / FastAPI
+- **UI (optional):** Streamlit 
 
-> Update this section with the exact libraries/APIs you used.
+
 
 ## Installation
 
